@@ -1,0 +1,51 @@
+@import "../../scss/utils.scss";
+
+.modal-background {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  @include flex-center;
+}
+
+.modal {
+  background-color: white;
+  padding: 0px 10px;
+  border-radius: 10px;
+  width: 30%;
+  transition: 0.2s;
+  display: flex;
+  flex-direction: column;
+  .modal-header {
+    border-bottom: solid 1px rgba($color: $light-color, $alpha: 0.4);
+    display: flex;
+    .modal-btn-close {
+      border: none;
+      outline: none;
+      background-color: white;
+      padding: 2px 12px;
+      font-size: large;
+      transition: 0.1s;
+      margin: 4px;
+      &:hover {
+        color: $primary-color;
+        background-color: rgba($color: $primary-color, $alpha: 0.1);
+      }
+    }
+
+    .modal-title {
+      font-family: $primary-font;
+    }
+  }
+
+  .modal-body-a {
+    display: flex;
+    flex-direction: column;
+    padding: 6px 16px;
+    max-height: 400px;
+    overflow: hidden;
+  }
+}

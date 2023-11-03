@@ -1,0 +1,104 @@
+@import "../../scss/utils.scss";
+
+.tweet {
+  display: flex;
+  padding: 8px 20px 8px 10px;
+  transition: 0.2s;
+  border-bottom: solid 1px #efefef;
+  &:hover {
+    background-color: #efefef;
+  }
+
+  .photo-container {
+    .photo {
+      @include circle(50px);
+      background-color: rgb(199, 206, 212);
+      background-size: cover;
+      background-position: center;
+    }
+  }
+
+  .details {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 8px;
+    .upper-layer {
+      display: flex;
+      align-items: center;
+      font-family: "Open Sans";
+      white-space: nowrap;
+
+      small {
+        margin-left: 6px;
+        color: rgb(116, 110, 110);
+      }
+      h4 {
+        margin: 0;
+
+        &:hover {
+          text-decoration: underline;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .main-text {
+      height: fit-content;
+      font-family: $secondary-font;
+      font-size: medium;
+      padding: 4px 0px;
+      display: flex;
+      justify-content: flex-start;
+      white-space: pre-wrap;
+    }
+
+    .tweet-buttons {
+      display: flex;
+      justify-content: space-between;
+      span {
+        font-size: small;
+      }
+      @mixin icon-style {
+        transition: 0.2s;
+        padding: 8px;
+        border-radius: 50%;
+      }
+      .tweet-btn {
+        outline: none;
+        border: none;
+        cursor: pointer;
+        background: none;
+        color: rgb(116, 110, 110);
+        font-size: medium;
+        @include flex-center;
+      }
+
+      .fa-comment-dots,
+      .fa-share,
+      .fa-heart,
+      .fa-retweet {
+        @include icon-style;
+      }
+      .fa-heart {
+        &:hover {
+          background-color: rgba(255, 0, 0, 0.1);
+          color: rgb(255, 0, 0);
+        }
+      }
+      .fa-retweet {
+        &:hover {
+          background-color: rgba(55, 214, 7, 0.1);
+          color: rgb(55, 214, 7);
+        }
+      }
+      .fa-comment-dots,
+      .fa-share {
+        &:hover {
+          background-color: rgba(44, 79, 235, 0.1);
+          color: rgb(44, 79, 235);
+        }
+      }
+    }
+  }
+}

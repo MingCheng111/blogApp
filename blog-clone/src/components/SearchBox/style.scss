@@ -1,0 +1,53 @@
+@import "../../scss/utils.scss";
+
+.search-container {
+  padding: 12px;
+  
+  .input-container {
+    @include flex-center;
+    background-color: #efefef;
+    padding: 4px 16px;
+    border-radius: 40px;
+    .fa-search {
+      border-right: solid 1px #333;
+      padding-right: 6px;
+      color: #333;
+    }
+    .input {
+      padding: 4px 6px;
+      border: none;
+      font-size: medium;
+      font-family: $secondary-font;
+      width: 100%;
+      background-color: transparent;
+    }
+  }
+
+  .card-container {
+    margin-top: 30px;
+    border: solid 2px rgba(0,0,0,0.2);
+    border-radius: 20px;
+    background-color: rgba(#c2e3f3, 0.4);
+    .who-to-follow-card {
+      display: flex;
+      flex-direction: column;
+      .header {
+        padding: 8px 8px;
+        border-bottom: solid 1px $light-color;
+        display: flex;
+        justify-content: flex-start;
+
+        h3 {
+          margin: 0;
+          font-family: "Montserrat";
+        }
+      }
+
+      .media-container {
+        display: flex;
+        padding: 8px;
+        flex-direction: column;
+      }
+    }
+  }
+}

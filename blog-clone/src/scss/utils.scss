@@ -1,0 +1,37 @@
+/*
+  This file contains all variables, mixins and functions etc that are to be used
+  in the whole code. These utils will be imported before using.
+*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap");
+
+// colors
+$primary-color: #00abee;
+$light-color: rgb(101, 119, 134);
+$primary-color-light: #00abee31;
+$image-color: rgb(199, 206, 212);
+
+// fonts
+$primary-font: "Roboto";
+$tweet-font: "Inter";
+$secondary-font: "Montserrat";
+
+// mixins
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin circle($radius) {
+  border-radius: 50%;
+  width: $radius;
+  height: $radius;
+}
+
+@mixin link {
+  text-decoration: none;
+  color: $primary-color;
+}

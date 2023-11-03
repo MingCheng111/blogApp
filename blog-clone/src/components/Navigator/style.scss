@@ -1,0 +1,68 @@
+@import "../../scss//utils.scss";
+
+.nav-container {
+  @include flex-center;
+  flex-direction: column;
+  padding: 0px 10px;
+  transition: 1s;
+  .top-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    .times {
+      margin-left: auto;
+      font-size: large;
+      padding: 14px;
+    }
+  }
+  .nav-content{
+    background: rgba(247, 247, 183,0.8);
+    border: solid 2px rgba(0,0,0,0.1);
+    border-radius: 12px;
+  }
+}
+
+.logo-icon {
+  @include flex-center;
+  @include circle(40px);
+  padding: 6px;
+  margin: 4px;
+  transition: 0.3s;
+  &:hover {
+    background-color: $primary-color-light;
+  }
+  .title-icon {
+    font-size: xx-large;
+    color: $primary-color;
+  }
+}
+
+.nav-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 90px;
+  padding: 0px 26px;
+
+  &:hover {
+    background-color: $primary-color-light;
+    color: $primary-color;
+  }
+  .icon {
+    font-size: x-large;
+  }
+  .text {
+    font-family: $primary-font;
+    font-size: larger;
+    margin-left: 10px;
+  }
+}
+
+.badge {
+  @include circle(12px);
+  background-color: $primary-color;
+  position: relative;
+  left: -160px;
+  top: -10px;
+}

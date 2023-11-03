@@ -1,0 +1,26 @@
+@media (max-width: 420px) {
+  .layout-container {
+    display: block;
+  }
+
+  .nav-container {
+    position: fixed;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    z-index: 2;
+    height: 100%;
+    justify-content: flex-start;
+  }
+
+  .search-wraper {
+    display: none;
+  }
+
+  .modal-tweet,
+  .modal {
+    width: 90%;
+  }
+
+  .delete-section {
+    width: 100%;
+  }
+}

@@ -1,0 +1,70 @@
+@import "../../scss/utils.scss";
+
+.wrapper-class {
+  padding: 1rem;
+  border: 1px solid #ccc;
+}
+.editor-class {
+  background-color:lightgray;
+  padding: 1rem;
+  border: 1px solid #ccc;
+}
+.toolbar-class {
+  border: 1px solid #ccc;
+}
+
+.tweet-box {
+  display: flex;
+  width: 100%;
+  .col-1 {
+    padding: 4px;
+    .avatar {
+      @include circle(50px);
+      background-position: center;
+      background-size: cover;
+      background-color: $image-color;
+    }
+  }
+
+  .col-2 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    .options {
+      display: flex;
+      flex-direction: row;
+      .group-icons {
+        display: flex;
+        .btn-icon {
+          background: none;
+          border: none;
+          outline: none;
+          padding: 4px;
+          margin: 4px 4px;
+          i {
+            font-size: 22px;
+            color: $primary-color;
+          }
+        }
+      }
+      .tweet-btn {
+        color: white;
+        background-color: $primary-color;
+        padding: 0px 14px;
+        border: none;
+        outline: none;
+        border-radius: 50px;
+        font-weight: bold;
+        margin-left: auto;
+        font-size: 14px;
+        font-family: $primary-font;
+        transition: 0.1s;
+        &:hover {
+          color: $primary-color;
+          background-color: rgba($color: $primary-color, $alpha: 0.1);
+        }
+      }
+    }
+  }
+}

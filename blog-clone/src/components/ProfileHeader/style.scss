@@ -1,0 +1,104 @@
+@import "../../scss/utils.scss";
+
+.profile-header {
+  height: fit-content;
+  .cover-photo {
+    width: 100%;
+    background: #333;
+    height: 200px;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .profile-section {
+    position: relative;
+    top: -40px;
+    .upper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .profile-photo {
+        @include circle(120px);
+        background-color: #333;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        left: 10px;
+        bottom: 16px;
+        border: solid 4px white;
+      }
+      .btn-container {
+        button {
+          background-color: white;
+          color: $primary-color;
+          border: solid 1px $primary-color;
+          border-radius: 50px;
+          outline: none;
+          padding: 4px 16px;
+          font-weight: bold;
+          font-family: $primary-font;
+          font-size: large;
+          margin-right: 16px;
+        }
+      }
+    }
+
+    .profile-details {
+      position: relative;
+      top: -10px;
+      .head {
+        display: flex;
+        flex-direction: column;
+        padding-left: 10px;
+        .name-title {
+          font-family: $primary-font;
+          margin: 0;
+        }
+        .username-title {
+          font-family: $primary-font;
+          margin: 0;
+          color: gray;
+        }
+        .bio {
+          font-family: $secondary-font;
+        }
+      }
+
+      .extra-details {
+        padding-left: 10px;
+        display: flex;
+        flex-flow: row wrap;
+        .item {
+          margin: 0px 10px 4px 0px;
+          color: #333;
+          width: fit-content;
+          font-family: $secondary-font;
+          font-size: 14px;
+          .fa {
+            margin-right: 4px;
+          }
+        }
+      }
+
+      .follow-section {
+        padding-left: 10px;
+        display: flex;
+        flex-flow: row wrap;
+        p {
+          margin-right: 8px;
+          font-family: $secondary-font;
+          color: $light-color;
+          font-size: 0.8em;
+          &:hover {
+            text-decoration: underline;
+            cursor: pointer;
+          }
+          span {
+            font-weight: bold;
+            color: black;
+          }
+        }
+      }
+    }
+  }
+}

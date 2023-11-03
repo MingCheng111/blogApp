@@ -1,0 +1,42 @@
+@import "../../../scss/utils.scss";
+
+.form-container {
+  @include flex-center;
+  flex-direction: column;
+  .title {
+    font-family: $primary-font;
+  }
+  form {
+    flex-direction: column;
+    width: 300px;
+    .error {
+      color: #ff4444;
+      font-family: $secondary-font;
+    }
+
+    .terms {
+      font-family: $primary-font;
+      color: #333;
+      a {
+        @include link;
+      }
+    }
+
+    .submit-btn {
+      color: white;
+      background-color: rgba($color: $primary-color, $alpha: 0.8);
+      padding: 10px 60px;
+      border: none;
+      outline: none;
+      border-radius: 50px;
+      font-size: large;
+      font-family: "Open Sans";
+      margin-top: 24px;
+      display: block;
+      margin: 0 auto;
+      &:hover {
+        background-color: rgba($color: $primary-color, $alpha: 1);
+      }
+    }
+  }
+}
